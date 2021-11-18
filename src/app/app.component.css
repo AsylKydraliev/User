@@ -1,0 +1,12 @@
+.users{
+  display: flex;
+}
+
+app-new-user{
+  width: 50%;
+  margin-top: 50px;
+}
+
+app-users{
+  width: 50%;
+}
