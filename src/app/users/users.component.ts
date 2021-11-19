@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { User } from '../shared/user.modal';
 
 @Component({
   selector: 'app-users',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent  {
+  users!: User[];
 
+  @Input() name = '';
+  @Input() email = '';
+  @Input() role = '';
 }

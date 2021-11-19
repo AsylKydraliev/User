@@ -1,4 +1,9 @@
 <div class="container users">
   <app-new-user></app-new-user>
-  <app-users></app-users>
+  <app-users
+    *ngFor="let user of users"
+    [name]="user.name"
+    [email]="user.email"
+    [role]="user.role"
+  ></app-users>
 </div>
