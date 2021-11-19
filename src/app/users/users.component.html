@@ -1,5 +1,13 @@
-<div class="col">
-  <p>{{ name }}</p>
-  <p>{{ email }}</p>
-  <p>{{ role }}</p>
+<div class="card" style="width: 18rem; height: 20rem;">
+  <img
+    src="https://www.pixsector.com/cache/50fcb576/av0cc3f7b41cb8510e35c.png"
+    class="card-img-top"
+    alt="{{ name }}"
+    style="width: 10rem; height: 10rem"
+  >
+  <div class="card-body user_info">
+    <p class="card-text">Name: {{ name }}</p>
+    <p class="card-text">Email: {{ email }}</p>
+    <p class="card-text">Role: {{ role }}</p>
+  </div>
 </div>

@@ -1,12 +1,8 @@
-.users{
-  display: flex;
+app-users{
+  display: inline-block;
+  margin: 10px;
 }
-
 app-new-user{
-  width: 50%;
   margin-top: 50px;
 }
 
-app-users{
-  width: 50%;
-}

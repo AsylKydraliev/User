@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { User } from './shared/user.modal';
+import { UserService } from './shared/user.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  users: User[] = [];
+  constructor(public userService: UserService) {}
 }

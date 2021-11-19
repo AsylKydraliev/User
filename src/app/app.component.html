@@ -1,7 +1,7 @@
-<div class="container users">
+<div class="container-field users">
   <app-new-user></app-new-user>
   <app-users
-    *ngFor="let user of users"
+    *ngFor="let user of userService.users"
     [name]="user.name"
     [email]="user.email"
     [role]="user.role"
