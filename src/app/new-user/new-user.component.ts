@@ -8,6 +8,8 @@ import { UserService } from '../shared/user.service';
   styleUrls: ['./new-user.component.css'],
 })
 export class NewUserComponent {
+  statusUser = false;
+  userStatusInfo = 'Status';
   @ViewChild('nameInput') nameInput!: ElementRef;
   @ViewChild('emailInput') emailInput!: ElementRef;
   @ViewChild('userStatus') userStatus!: ElementRef;
@@ -15,13 +17,23 @@ export class NewUserComponent {
 
   constructor(public userService: UserService) {}
 
-  getValue(){
+  getValue() {
     const userName = this.nameInput.nativeElement.value;
     const userEmail = this.emailInput.nativeElement.value;
-    const userStatus = this.userStatus.nativeElement.value;
+    const statusUser = this.userStatus.nativeElement.checked;
     const userSelect = this.chooseSelect.nativeElement.value;
 
-    const user = new User(userName, userEmail, userStatus, userSelect);
+    const user = new User(userName, userEmail, statusUser, userSelect);
     this.userService.users.push(user);
+  }
+
+  getStatus(){
+    if (this.userStatus.nativeElement.checked) {
+      this.statusUser = true;
+      return this.userStatusInfo = 'Active';
+    } else {
+      this.statusUser = false;
+      return this.userStatusInfo = 'Inactive';
+    }
   }
 }

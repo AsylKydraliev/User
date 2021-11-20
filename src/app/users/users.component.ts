@@ -5,8 +5,14 @@ import { Component, Input } from '@angular/core';
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.css'],
 })
-export class UsersComponent  {
+export class UsersComponent {
   @Input() name = '';
   @Input() email = '';
+  @Input() status = false;
   @Input() role = '';
 }
+
+
+
+
+
