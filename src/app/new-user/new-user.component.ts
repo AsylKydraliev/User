@@ -24,7 +24,7 @@ export class NewUserComponent {
     const userSelect = this.chooseSelect.nativeElement.value;
 
     const user = new User(userName, userEmail, statusUser, userSelect);
-    this.userService.users.push(user);
+    this.userService.addUsers(user);
   }
 
   getStatus(){

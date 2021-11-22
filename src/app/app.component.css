@@ -1,6 +1,19 @@
+.users{
+  display: flex;
+}
+
+app-new-user{
+  width: 33%;
+}
+
 app-users{
-  display: inline-block;
   margin: 10px;
+  width: 33%;
+  display: block;
+}
+
+app-groups{
+  width: 33%;
 }
 
 
