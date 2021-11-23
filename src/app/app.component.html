@@ -1,11 +1,17 @@
-<div class="container users">
+<div class="container-fluid users">
   <app-new-user></app-new-user>
   <app-users
-    *ngFor="let user of users"
+    *ngFor="let user of users; let i = index"
     [name]="user.name"
     [email]="user.email"
     [role]="user.role"
     [status]="user.status"
+    [index]="i"
   ></app-users>
-  <app-groups></app-groups>
+  <app-groups
+    *ngFor="let group of groups; let i = index"
+    [name]="group.name"
+    [users]="group.users"
+    [index]="i"
+  ></app-groups>
 </div>

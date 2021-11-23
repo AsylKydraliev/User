@@ -1,8 +1,8 @@
-<div class="card user_info">
+<div class="card user_info {{ userItemBorder }}" (click)="addUserToGroup(index)">
   <div class="card-body">
     <p class="card-text">Name: {{ name }}</p>
     <p class="card-text">Email: {{ email }}</p>
     <p class="card-text">Status: {{ status ? 'Active' : 'Inactive'}}</p>
     <p class="card-text">Role: {{ role }}</p>
   </div>
-</div><br/>
+</div>

@@ -7,6 +7,7 @@ import { UsersComponent } from './users/users.component';
 import { FormsModule } from '@angular/forms';
 import { UserService } from './shared/user.service';
 import { GroupsComponent } from './groups/groups.component';
+import { GroupService } from './shared/group.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { GroupsComponent } from './groups/groups.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [UserService],
+  providers: [UserService, GroupService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
