@@ -1,4 +1,4 @@
-<div class="card mt-5 group {{ groupItemBorder }}" (click)="onClick(index)">
+<div class="card group mb-2 {{ status ? groupItemBorder : '' }}" (click)="onClick(index)">
   <div class="card-header text-center">{{ name }}</div>
   <div class="card-body text-primary">
     <p class="card-text" *ngFor="let userName of users">{{ userName.name }}</p>

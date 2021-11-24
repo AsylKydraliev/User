@@ -1,19 +1,5 @@
 .users{
-  display: flex;
-}
-
-app-new-user{
-  width: 33%;
-}
-
-app-users{
-  margin: 10px;
-  width: 33%;
-  display: block;
-}
-
-app-groups{
-  width: 33%;
+  margin-top: 20px;
 }
 
 

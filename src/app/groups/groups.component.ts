@@ -9,19 +9,16 @@ import { User } from '../shared/user.modal';
 })
 export class GroupsComponent {
   @Input() index!: number;
-  groupStatus = false;
-  groupItemBorder = '';
+  groupItemBorder = 'border-primary shadow-lg bg-white';
   @Input() name = '';
+  @Input() status = false;
   @Input() users!: User[];
 
   constructor(private groupService: GroupService) {}
 
   onClick(index: number) {
-    this.groupStatus = true;
-    this.groupItemBorder = 'border-primary shadow-lg bg-white';
     this.groupService.getGroups().forEach(item => {
       item.status = this.groupService.getGroups()[index] === item;
     });
-    console.log(this.groupService.getGroups());
   }
 }

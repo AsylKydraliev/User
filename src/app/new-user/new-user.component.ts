@@ -36,6 +36,9 @@ export class NewUserComponent {
     const groupInputValue = this.groupNameInput.nativeElement.value;
     const group = new Group(groupInputValue, this.groupUserName, false);
     this.groupService.addGroups(group);
+    if(group.users){
+      this.groupUserName = [];
+    }
   }
 
   getStatus(){

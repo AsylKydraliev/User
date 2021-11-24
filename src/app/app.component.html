@@ -1,17 +1,26 @@
-<div class="container-fluid users">
-  <app-new-user></app-new-user>
-  <app-users
-    *ngFor="let user of users; let i = index"
-    [name]="user.name"
-    [email]="user.email"
-    [role]="user.role"
-    [status]="user.status"
-    [index]="i"
-  ></app-users>
-  <app-groups
-    *ngFor="let group of groups; let i = index"
-    [name]="group.name"
-    [users]="group.users"
-    [index]="i"
-  ></app-groups>
+<div class="container users">
+  <div class="row mt-2">
+    <div class="col-4">
+      <app-new-user></app-new-user>
+    </div>
+    <div class="col-4">
+      <app-users
+        *ngFor="let user of users; let i = index"
+        [name]="user.name"
+        [email]="user.email"
+        [role]="user.role"
+        [status]="user.status"
+        [index]="i"
+      ></app-users>
+    </div>
+    <div class="col-4 group">
+      <app-groups
+        *ngFor="let group of groups; let i = index"
+        [name]="group.name"
+        [status]="group.status"
+        [users]="group.users"
+        [index]="i"
+      ></app-groups>
+    </div>
+  </div>
 </div>
